@@ -1,0 +1,35 @@
+{
+  "cloudflare": {
+    "api_token": "YOUR_API_TOKEN"
+  },
+  "dns": {
+    "name": "app.example.com",
+    "record_type": "A",
+    "ttl": 60,
+    "proxied": false
+  },
+  "checks": {
+    "interval_seconds": 10,
+    "timeout_seconds": 2,
+    "failure_threshold": 3,
+    "recovery_threshold": 3,
+    "cooldown_seconds": 30,
+    "method": "icmp"
+  },
+  "targets": [
+    {
+      "ip": "1.2.3.4",
+      "enabled": true
+    },
+    {
+      "ip": "5.6.7.8",
+      "enabled": true
+    }
+  ],
+  "logging": {
+    "level": "info"
+  },
+  "safety": {
+    "allow_zero_records": false
+  }
+}

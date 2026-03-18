@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+coverage.*
+*.coverprofile
+*.out
+bin
+dist
+config.json

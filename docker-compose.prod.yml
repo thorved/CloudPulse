@@ -1,0 +1,10 @@
+services:
+  cloudpulse:
+    image: ghcr.io/thorved/cloudpulse:latest
+    container_name: cloudpulse
+    restart: unless-stopped
+    pull_policy: always
+    cap_add:
+      - NET_RAW
+    volumes:
+      - ./config.json:/app/config.json:ro

@@ -1,0 +1,12 @@
+services:
+  cloudpulse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cloudpulse:local
+    container_name: cloudpulse
+    restart: unless-stopped
+    cap_add:
+      - NET_RAW
+    volumes:
+      - ./config.json:/app/config.json:ro
