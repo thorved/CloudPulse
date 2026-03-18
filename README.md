@@ -119,9 +119,8 @@ The repository includes a CI workflow at `.github/workflows/ci.yml` that:
 
 - runs `go test ./...`
 - runs `go build ./...`
-- builds the Docker image to catch container build regressions
 - publishes `ghcr.io/thorved/cloudpulse:latest` on pushes to `main` or `master`
-- can also be run manually with GitHub Actions `workflow_dispatch`
+- can also be run manually with GitHub Actions `workflow_dispatch`, which also publishes `latest`
 
 ## Notes
 
